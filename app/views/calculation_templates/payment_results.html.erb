@@ -3,22 +3,22 @@ Payment results
 <dl>
   <dt>APR</dt>
   <dd>
-    <%= @random_min %>
+    <%= (@pay_apr).to_s(:percentage, precision: 4) %>
   </dd>
 
   <dt>Number of years</dt>
   <dd>
-    <%= @random_max%>
+    <%= @pay_n/12%>
   </dd>
 
   <dt>Principal</dt>
   <dd>
-    <%= @random_result%>
+    <%= @pay_pv.to_s(:currency)%>
   </dd>
 
   <dt>Payment</dt>
   <dd>
-    <%= @random_result%>
+    <%= @payment_result.to_s(:currency)%>
   </dd>
 
 </dl>
