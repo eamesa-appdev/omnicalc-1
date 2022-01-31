@@ -30,4 +30,15 @@ class ApplicationController < ActionController::Base
     @random_result = rand(@random_min..@random_max)
     render({ :template => "calculation_templates/random_results.html.erb"})
   end
+
+  def blank_payment_form
+    render({ :template => "calculation_templates/payment_form.html.erb"})
+  end
+
+  def payment_results
+    render({ :template => "calculation_templates/payment_results.html.erb"})
+  end
+
+
+
 end
